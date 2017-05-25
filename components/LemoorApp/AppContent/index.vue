@@ -1,10 +1,6 @@
 <template>
   <div class="AppContent">
-    <div class="row">
-      <div class="col-xs-12">
-        <div class="box">12</div>
-      </div>
-    </div>
+    AppContent
   </div>
 </template>
 
@@ -15,4 +11,8 @@ export default {
 </script>
 
 <style>
+.AppContent {
+  color: #3f4649;
+}
+
 </style>

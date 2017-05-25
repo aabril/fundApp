@@ -14,6 +14,10 @@ module.exports = {
     ]
   },
   /*
+  ** Import plugins
+  */
+  plugins: ['~plugins/vue-touch'],
+  /*
   ** Customize the progress-bar color
   */
   loading: { color: '#3B8070' },
