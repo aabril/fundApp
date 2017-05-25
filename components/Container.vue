@@ -18,13 +18,13 @@ export default {
 .Container {
   width: 416px;
   height: 850px;
-  margin: 60px auto;
+  margin: 65px auto;
   background: url('~assets/iphone6-portrait.png') no-repeat;
 }
 
 .Content {
   position: absolute;
-  margin-top: 85px;
+  margin-top: 86px;
   margin-left: 20px;
   width: 375px;
   height: 667px;
