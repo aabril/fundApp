@@ -1,18 +1,13 @@
 <template>
-  <Container/>
+  <App/>
 </template>
 
 <script>
-import Container from '~components/Container.vue'
-
+import App from '~components/App'
 export default {
-  components: { Container }
+  components: { App }
 }
 </script>
 
 <style>
-html, body {
-  margin: 0;
-  background: rgb(29,32,41);
-}
 </style>

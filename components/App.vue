@@ -1,5 +1,5 @@
 <template>
-  <div class="LemoorApp">
+  <div class="App">
     <TopNav/>
     <AppContent/>
     <MenuNav/>
@@ -7,9 +7,9 @@
 </template>
 
 <script>
-import TopNav from '~components/LemoorApp/TopNav'
-import AppContent from '~components/LemoorApp/AppContent'
-import MenuNav from '~components/LemoorApp/MenuNav'
+import TopNav from '~components/TopNav'
+import AppContent from '~components/AppContent'
+import MenuNav from '~components/MenuNav'
 
 export default {
   components: { TopNav, AppContent, MenuNav }
@@ -17,7 +17,7 @@ export default {
 </script>
 
 <style>
-.LemoorApp {
+.App {
   height: 100%;
 }
 </style>

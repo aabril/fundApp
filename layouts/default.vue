@@ -1,8 +1,34 @@
 <template>
-  <div>
-    <nuxt/>
+  <div class="Container">
+    <div class="Content" :class="{ onTap : tapping }"  @mousedown="onClick" @click.stop="onClickStop">
+      <nuxt/>
+    </div>
   </div>
 </template>
+
+<script>
+import App from '~components/App.vue'
+
+export default {
+  components: { App },
+  beforeMount () {
+    this.tapping = false
+  },
+  data () {
+    return {
+      tapping: false
+    }
+  },
+  methods: {
+    onClick () {
+      this.tapping = true
+    },
+    onClickStop () {
+      this.tapping = false
+    }
+  }
+}
+</script>
 
 <style>
 html
@@ -15,39 +41,40 @@ html
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   box-sizing: border-box;
+  background: rgb(29,32,41);
 }
 *, *:before, *:after
 {
   box-sizing: border-box;
   margin: 0;
 }
-.button--green
-{
-  display: inline-block;
-  border-radius: 4px;
-  border: 1px solid #3b8070;
-  color: #3b8070;
-  text-decoration: none;
-  padding: 10px 30px;
+
+.Container {
+  width: 416px;
+  height: 850px;
+  margin: 65px auto;
+  background: url('~assets/iphone6-portrait.png') no-repeat;
 }
-.button--green:hover
-{
-  color: #fff;
-  background-color: #3b8070;
+
+.Content {
+  position: absolute;
+  margin-top: 86px;
+  margin-left: 20px;
+  width: 375px;
+  height: 667px;
+  background: white;
+  cursor: url('~assets/mobile-cursor.png') 39 39, auto;
+
+  /* make text not selectable */
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
 }
-.button--grey
-{
-  display: inline-block;
-  border-radius: 4px;
-  border: 1px solid #35495e;
-  color: #35495e;
-  text-decoration: none;
-  padding: 10px 30px;
-  margin-left: 15px;
+
+.onTap {
+  cursor: url('~assets/mobile-cursor-tap.png') 39 39, auto;
 }
-.button--grey:hover
-{
-  color: #fff;
-  background-color: #35495e;
-}
+
 </style>
